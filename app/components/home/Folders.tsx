@@ -9,7 +9,9 @@ const Folders = () => {
 
   useEffect(() => {
     (async () => {
-      const { status } = await MediaLibrary.requestPermissionsAsync();
+      const { status } = await MediaLibrary.requestPermissionsAsync(true);
+
+      console.log("Media Library Permission Status:", status);
 
       if (status === "granted") {
         setPermissionGranted(true);

@@ -54,7 +54,9 @@
         "expo-media-library",
         {
           "photosPermission": "Allow this app to access your media library.",
-          "videosPermission": "Allow this app to access your videos."
+          "videosPermission": "Allow this app to access your videos.",
+          "audioPermission": "Allow this app to access your audio files.",
+          "savePhotosPermission": "Allow this app to save media to your library."
         }
       ]
     ],
