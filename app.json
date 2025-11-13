@@ -23,6 +23,7 @@
     },
     "web": {
       "output": "static",
+      "bundler": "metro",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -37,6 +38,14 @@
           "dark": {
             "backgroundColor": "#000000"
           }
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow this app to access your media library.",
+          "videosPermission": "Allow this app to access your videos.",
+          "audioPermission": "Allow this app to access your audio files."
         }
       ]
     ],

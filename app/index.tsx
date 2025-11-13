@@ -1,22 +1,16 @@
-import { Button, Text, View } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
-import { setTestValue } from "./redux/slices/testing";
-import { RootState } from "./redux/store";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Header from "./components/Header";
+import Folders from "./components/home/Folders";
+import History from "./components/home/History";
+import Options from "./components/home/Options";
 
 export default function Index() {
-  const { testValue } = useSelector((state: RootState) => state.testing);
-  const dispatch = useDispatch();
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Text style={{ marginTop: 10, fontSize: 40 }}>Test Value: {testValue}</Text>
-      <Button title="Increment" onPress={() => dispatch(setTestValue(testValue + 1))} />
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#1a1919' }}>
+      <Header />
+      <Options />
+      <History />
+      <Folders />
+    </SafeAreaView>
   );
 }
